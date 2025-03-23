@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoExceptionHandler", "src\AutoExceptionHandler\AutoExceptionHandler.csproj", "{5C73EC06-BBA5-45F2-BA3B-D84B5534BC02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoExceptionHandler.Sample", "examples\AutoExceptionHandler.Sample\AutoExceptionHandler.Sample.csproj", "{5BABF79D-0DCB-4AEA-9A8E-47D52D1B64EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoExceptionHandler.Tests", "tests\AutoExceptionHandler.Tests\AutoExceptionHandler.Tests.csproj", "{E1FAC9B1-7735-4779-9209-C6C457331DF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoExceptionHandler.Annotations", "src\AutoExceptionHandler.Annotations\AutoExceptionHandler.Annotations.csproj", "{8173E2D7-6854-4A8F-B040-3E9E9F880F6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C73EC06-BBA5-45F2-BA3B-D84B5534BC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C73EC06-BBA5-45F2-BA3B-D84B5534BC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C73EC06-BBA5-45F2-BA3B-D84B5534BC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C73EC06-BBA5-45F2-BA3B-D84B5534BC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BABF79D-0DCB-4AEA-9A8E-47D52D1B64EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BABF79D-0DCB-4AEA-9A8E-47D52D1B64EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BABF79D-0DCB-4AEA-9A8E-47D52D1B64EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BABF79D-0DCB-4AEA-9A8E-47D52D1B64EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1FAC9B1-7735-4779-9209-C6C457331DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1FAC9B1-7735-4779-9209-C6C457331DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1FAC9B1-7735-4779-9209-C6C457331DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1FAC9B1-7735-4779-9209-C6C457331DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8173E2D7-6854-4A8F-B040-3E9E9F880F6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8173E2D7-6854-4A8F-B040-3E9E9F880F6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8173E2D7-6854-4A8F-B040-3E9E9F880F6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8173E2D7-6854-4A8F-B040-3E9E9F880F6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
