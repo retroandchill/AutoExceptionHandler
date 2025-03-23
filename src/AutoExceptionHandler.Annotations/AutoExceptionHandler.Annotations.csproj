@@ -9,6 +9,13 @@
         <PackageId>AutoExceptionHandler.Annotations</PackageId>
         <Version>1.0.0</Version>
         <IsPackable>false</IsPackable>
+
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
+        <Deterministic>true</Deterministic>
+        <ContinuousIntegrationBuild Condition="'$(TF_BUILD)' == 'true'">True</ContinuousIntegrationBuild>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
