@@ -65,6 +65,7 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
           
   create_nuget:
+    name: Create Nuget Package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -85,6 +86,7 @@ jobs:
           path: ${{ env.NuGetDirectory }}/*.nupkg
           
   validate_nuget:
+    name: Validate Nuget Package
     runs-on: ubuntu-latest
     needs: [ create_nuget ]
     steps:
@@ -109,6 +111,7 @@ jobs:
         run: meziantou.validate-nuget-package (Get-ChildItem "${{ env.NuGetDirectory }}/*.nupkg")  
         
   deploy:
+    name: Publish Nuget Package
     # Publish only when creating a GitHub Release
     # https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
     # You can update this logic if you want to manage releases differently
