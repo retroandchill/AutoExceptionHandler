@@ -66,7 +66,7 @@ jobs:
           
   create_nuget:
     name: Create Nuget Package
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
         with:
@@ -87,7 +87,7 @@ jobs:
           
   validate_nuget:
     name: Validate Nuget Package
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: [ create_nuget ]
     steps:
       # Install the .NET SDK indicated in the global.json file
@@ -116,7 +116,7 @@ jobs:
     # https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository
     # You can update this logic if you want to manage releases differently
     if: github.event_name == 'release'
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: [ validate_nuget, build ]
     steps:
       # Download the NuGet package created in the previous job
