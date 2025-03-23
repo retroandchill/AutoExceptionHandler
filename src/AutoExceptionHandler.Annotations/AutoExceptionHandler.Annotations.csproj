@@ -14,7 +14,7 @@
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
         <Deterministic>true</Deterministic>
-        <ContinuousIntegrationBuild Condition="'$(TF_BUILD)' == 'true'">True</ContinuousIntegrationBuild>
+        <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">True</ContinuousIntegrationBuild>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
     </PropertyGroup>
 
