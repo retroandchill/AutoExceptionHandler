@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using AutoExceptionHandler.Annotations;
-using AutoExceptionHandler.Generator.Utilities;
 using AutoExceptionHandler.Properties;
+using AutoExceptionHandler.Utilities;
 using HandlebarsDotNet;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;

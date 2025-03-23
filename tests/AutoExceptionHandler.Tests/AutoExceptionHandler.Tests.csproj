@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\AutoExceptionHandler.Generator\AutoExceptionHandler.Generator.csproj"/>
+        <ProjectReference Include="..\..\src\AutoExceptionHandler\AutoExceptionHandler.csproj"/>
     </ItemGroup>
 
 

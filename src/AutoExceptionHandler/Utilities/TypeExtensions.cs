@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.CodeAnalysis;
 
-namespace AutoExceptionHandler.Generator.Utilities;
+namespace AutoExceptionHandler.Utilities;
 
 /// <summary>
 /// Provides extension methods for working with types represented as <see cref="ITypeSymbol"/>.
