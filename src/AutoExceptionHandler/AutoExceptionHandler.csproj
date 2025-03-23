@@ -15,6 +15,16 @@
 
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <Title>AutoExceptionHandler</Title>
+        <Authors>Retro &amp; Chill</Authors>
+        <Description>C# Source Generator for creating typed exception handling methods</Description>
+        <RepositoryUrl>https://github.com/retroandchill/AutoExceptionHandler</RepositoryUrl>
+        <RepositoryType>Git</RepositoryType>
+        <PackageTags>source-generator exceptions</PackageTags>
+        <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
     <ItemGroup>

@@ -9,6 +9,9 @@
         <PackageId>AutoExceptionHandler.Annotations</PackageId>
         <Version>1.0.0</Version>
         <IsPackable>false</IsPackable>
+
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
