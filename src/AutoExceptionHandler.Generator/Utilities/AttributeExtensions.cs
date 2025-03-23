@@ -7,7 +7,7 @@ namespace AutoExceptionHandler.Generator.Utilities;
 /// <summary>
 /// Provides extension methods for handling attributes in .NET code analysis.
 /// </summary>
-public static class AttributeExtensions {
+internal static class AttributeExtensions {
 
   /// <summary>
   /// Determines whether the specified attribute is of the given attribute type.

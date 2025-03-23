@@ -12,7 +12,7 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 namespace AutoExceptionHandler.Generator;
 
 [Generator]
-public class ExceptionHandlerGenerator : IIncrementalGenerator {
+internal class ExceptionHandlerGenerator : IIncrementalGenerator {
 
   private static readonly DiagnosticDescriptor RequiresPartialWarning = new(
       "EHG001",

@@ -5,7 +5,7 @@ namespace AutoExceptionHandler.Generator.Utilities;
 /// <summary>
 /// Provides extension methods for working with methods represented as <see cref="IMethodSymbol"/>.
 /// </summary>
-public static class MethodExtensions {
+internal static class MethodExtensions {
 
   /// <summary>
   /// Determines whether two methods have a compatible or common return type.

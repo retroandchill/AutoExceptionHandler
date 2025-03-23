@@ -7,7 +7,7 @@ namespace AutoExceptionHandler.Generator.Utilities;
 /// <summary>
 /// Provides extension methods for working with types represented as <see cref="ITypeSymbol"/>.
 /// </summary>
-public static class TypeExtensions {
+internal static class TypeExtensions {
 
   /// <summary>
   /// Checks if the type represented by the current <see cref="ITypeSymbol"/> is of type <see cref="Exception"/>.
