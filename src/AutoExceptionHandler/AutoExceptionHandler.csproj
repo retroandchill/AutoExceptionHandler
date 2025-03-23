@@ -25,6 +25,8 @@
 
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageProjectUrl>https://github.com/retroandchill/AutoExceptionHandler</PackageProjectUrl>
+        <PackageIcon>icon.png</PackageIcon>
     </PropertyGroup>
 
     <ItemGroup>
@@ -66,6 +68,7 @@
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <DocumentationFile>bin\Release\AutoExceptionHandler.xml</DocumentationFile>
+      <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
 
     <Target Name="GetDependencyTargetPaths">
@@ -87,10 +90,18 @@
     <ItemGroup>
         <None Include="../../README.md" Pack="true" PackagePath="\" />
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
+        <None Include="$(OutputPath)\$(AssemblyName).pdb" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
         <None Include="$(PKGHandlebars_Net)\lib\netstandard2.0\Handlebars.dll" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
+        <None Include="$(PKGHandlebars_Net)\lib\netstandard2.0\Handlebars.pdb" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.dll" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
+        <None Include="$(OutputPath)\$(AssemblyName).Annotations.pdb" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.dll" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
+        <None Include="$(OutputPath)\$(AssemblyName).Annotations.pdb" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.xml" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
         <None Include="AutoExceptionHandler.targets" Pack="true" PackagePath="build" Visible="false" />
+        <None Update="icon.png">
+          <Pack>True</Pack>
+          <PackagePath></PackagePath>
+        </None>
     </ItemGroup>
 </Project>

@@ -20,6 +20,7 @@
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
       <DocumentationFile>bin\Release\AutoExceptionHandler.Annotations.xml</DocumentationFile>
+      <DebugSymbols>true</DebugSymbols>
     </PropertyGroup>
 
 </Project>
