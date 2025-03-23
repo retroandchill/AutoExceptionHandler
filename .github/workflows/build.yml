@@ -31,6 +31,15 @@ jobs:
           path: .\.sonar\scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
+      - name: Cache .Net Tools
+        uses: actions/cache@v4
+        with:
+          path: ~\.dotnet\tools
+          key: ${{ runner.os }}-dotnet
+          restore-keys: ${{ runner.os }}-dotnet
+      - name: Install dotnet-coverage
+        shell: powershell
+        run: dotnet tool install --global dotnet-coverage
       - name: Install SonarQube Cloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: powershell
@@ -42,6 +51,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          .\.sonar\scanner\dotnet-sonarscanner begin /k:"retroandchill_ExceptionHandlerGenerator" /o:"fcorso2016" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
+          .\.sonar\scanner\dotnet-sonarscanner begin /k:"retroandchill_ExceptionHandlerGenerator" /o:"fcorso2016" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.cs.vscoveragexml.reportsPaths=coverage.xml /d:sonar.exclusions="ExceptionHandlerGenerator/ExceptionHandlerGenerator.Sample/**/*"
           dotnet build
+          dotnet-coverage collect "dotnet test" -f xml -o "coverage.xml"
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
