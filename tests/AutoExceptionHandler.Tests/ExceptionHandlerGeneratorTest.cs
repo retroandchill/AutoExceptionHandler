@@ -19,10 +19,10 @@ public class ExceptionHandlerGeneratorTest {
                                          [ExceptionHandler]
                                          public partial class ExampleHandler {
                                            [GeneralExceptionHandler]
-                                           public partial int HandleException(Exception ex);
+                                           public partial int HandleException(Exception ex, string message);
                                                                                       
                                            [HandlesException]
-                                           public int HandleSingle(ArgumentNullException ex) {
+                                           public int HandleSingle(ArgumentNullException ex, string message) {
                                              return 4;
                                            }
                                                                                         
@@ -46,11 +46,12 @@ public class ExceptionHandlerGeneratorTest {
                                                     partial class ExampleHandler {
                                                     
                                                       public partial int HandleException(
-                                                          System.Exception ex    
+                                                          System.Exception ex,     
+                                                                string message    
                                                           ) {
                                                         return ex switch {
                                                           System.ArgumentNullException e0 =>
-                                                                HandleSingle(e0),
+                                                                HandleSingle(e0, message),
                                                           System.NullReferenceException or System.ArithmeticException =>
                                                               HandleMultiple((System.Exception) ex),
                                                         _ =>

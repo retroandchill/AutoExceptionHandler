@@ -3,7 +3,6 @@
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
-        <RootNamespace>ExceptionHandlerGenerator.Sample</RootNamespace>
         <IsPackable>false</IsPackable>
 
         <RootNamespace>AutoExceptionHandler.Sample</RootNamespace>

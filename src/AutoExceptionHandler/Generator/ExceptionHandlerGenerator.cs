@@ -134,7 +134,7 @@ internal class ExceptionHandlerGenerator : IIncrementalGenerator {
                                   Comma = j != y.Symbol.Parameters.Length - 2,
                               })
                               .ToList(),
-                          HasOtherParameters = x.Symbol.Parameters.Length > 1
+                          HasOtherParameters = y.Symbol.Parameters.Length > 1
                       };
                     })
                     .ToList(),
