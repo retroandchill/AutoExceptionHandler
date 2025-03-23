@@ -15,18 +15,18 @@ namespace ExceptionHandlerGenerator.Generators;
 public class ExceptionHandlerGenerator : IIncrementalGenerator {
 
   private static readonly DiagnosticDescriptor RequiresPartialWarning = new(
-      "EHGM001",
+      "EHG001",
       "Target class must be partial", 
       "Target class '{0}' must be partial",
-      "ExceptionHandlerGenerator",
+      "Design",
       DiagnosticSeverity.Warning, 
       isEnabledByDefault: true);
 
   private static readonly DiagnosticDescriptor NoNestedError = new(
-      "EHGM002",
+      "EHG002",
       "Target class may not be nested",
       "Target class '{0}' may not be nested",
-      "ExceptionHandlerGenerator",
+      "Design",
       DiagnosticSeverity.Error,
       isEnabledByDefault: true);
 
