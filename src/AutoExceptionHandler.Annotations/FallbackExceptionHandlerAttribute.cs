@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace AutoExceptionHandler.Annotations;
 
@@ -16,4 +17,5 @@ namespace AutoExceptionHandler.Annotations;
 /// as its primary argument, to facilitate proper exception handling.
 /// </example>
 [AttributeUsage(AttributeTargets.Method)]
+[Conditional("AUTO_EXCEPTION_HANDLER_SCOPE_RUNTIME")]
 public class FallbackExceptionHandlerAttribute : Attribute;

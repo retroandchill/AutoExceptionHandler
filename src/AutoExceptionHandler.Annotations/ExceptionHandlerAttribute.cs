@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace AutoExceptionHandler.Annotations;
 
@@ -13,4 +14,5 @@ namespace AutoExceptionHandler.Annotations;
 /// </remarks>
 /// <seealso cref="GeneralExceptionHandlerAttribute"/>
 [AttributeUsage(AttributeTargets.Class)]
+[Conditional("AUTO_EXCEPTION_HANDLER_SCOPE_RUNTIME")]
 public class ExceptionHandlerAttribute : Attribute;

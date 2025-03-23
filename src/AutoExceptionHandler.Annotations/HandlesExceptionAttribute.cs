@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace AutoExceptionHandler.Annotations;
 
@@ -25,6 +26,7 @@ namespace AutoExceptionHandler.Annotations;
 /// error handling logic.
 /// </example>
 [AttributeUsage(AttributeTargets.Method)]
+[Conditional("AUTO_EXCEPTION_HANDLER_SCOPE_RUNTIME")]
 public class HandlesExceptionAttribute(params Type[] exceptionTypes) : Attribute;
 
 #pragma warning restore 9113
