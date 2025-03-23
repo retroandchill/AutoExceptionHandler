@@ -11,9 +11,10 @@
         <RootNamespace>AutoExceptionHandler</RootNamespace>
         <PackageId>AutoExceptionHandler</PackageId>
         <IncludeBuildOutput>false</IncludeBuildOutput>
-        <OutputPath>$(MSBuildProjectDirectory)\bin\$(Configuration)\netstandard2.0\</OutputPath>
-        <Version>1.0.0</Version>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>1.0.0-rc.2</PackageVersion>
+
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,7 +28,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AutoExceptionHandler.Annotations\AutoExceptionHandler.Annotations.csproj" />
+      <ProjectReference Include="..\AutoExceptionHandler.Annotations\AutoExceptionHandler.Annotations.csproj" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
@@ -46,14 +47,26 @@
     </ItemGroup>
 
     <PropertyGroup>
-        <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths</GetTargetPathDependsOn>
+        <GetTargetPathDependsOn>$(GetTargetPathDependsOn);GetDependencyTargetPaths;_ResolveCopyLocalNuGetPackageXmls</GetTargetPathDependsOn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\AutoExceptionHandler.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <DocumentationFile>bin\Release\AutoExceptionHandler.xml</DocumentationFile>
     </PropertyGroup>
 
     <Target Name="GetDependencyTargetPaths">
         <ItemGroup>
             <TargetPathWithTargetPlatformMoniker Include="$(PKGHandlebars_Net)\lib\netstandard2.0\Handlebars.dll" IncludeRuntimeDependency="false" />
-            <TargetPathWithTargetPlatformMoniker Include="$(OutputPath)\AutoExceptionHandler.Annotations.dll"
-                                                 IncludeRuntimeDependency="false"/>
+        </ItemGroup>
+    </Target>
+
+    <Target Name="_ResolveCopyLocalNuGetPackageXmls" AfterTargets="ResolveReferences">
+        <ItemGroup>
+            <ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths->'%(RootDir)%(Directory)%(Filename).xml')" Condition="Exists('%(RootDir)%(Directory)%(Filename).xml')" />
         </ItemGroup>
     </Target>
 
@@ -68,5 +81,6 @@
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.dll" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.xml" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
         <None Include="AutoExceptionHandler.targets" Pack="true" PackagePath="build" Visible="false" />
+        <None Include="$(PKGHandlebars_Net)\lib\netstandard2.0\Handlebars.dll" Pack="true" PackagePath="runtimes\any\lib\netstandard2.0\" />
     </ItemGroup>
 </Project>
