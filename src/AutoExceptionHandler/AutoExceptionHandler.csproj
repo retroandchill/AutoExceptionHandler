@@ -11,7 +11,7 @@
         <RootNamespace>AutoExceptionHandler</RootNamespace>
         <PackageId>AutoExceptionHandler</PackageId>
         <IncludeBuildOutput>false</IncludeBuildOutput>
-        <PackageVersion>1.0.0-rc.2</PackageVersion>
+        <PackageVersion>1.0.0</PackageVersion>
 
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -77,10 +77,10 @@
     <ItemGroup>
         <None Include="../../README.md" Pack="true" PackagePath="\" />
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
+        <None Include="$(PKGHandlebars_Net)\lib\netstandard2.0\Handlebars.dll" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.dll" Pack="true" PackagePath="analyzers/roslyn$(ROSLYN_VERSION)/dotnet/cs" Visible="false" />
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.dll" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
         <None Include="$(OutputPath)\$(AssemblyName).Annotations.xml" Pack="true" PackagePath="lib\netstandard2.0" Visible="true" />
         <None Include="AutoExceptionHandler.targets" Pack="true" PackagePath="build" Visible="false" />
-        <None Include="$(PKGHandlebars_Net)\lib\netstandard2.0\Handlebars.dll" Pack="true" PackagePath="runtimes\any\lib\netstandard2.0\" />
     </ItemGroup>
 </Project>
