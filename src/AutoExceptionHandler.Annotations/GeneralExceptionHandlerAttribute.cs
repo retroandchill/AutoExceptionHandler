@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExceptionHandlerAnnotations;
+namespace AutoExceptionHandler.Annotations;
 
 /// <summary>
 /// Identifies methods that serve as general exception handlers within a specific context.

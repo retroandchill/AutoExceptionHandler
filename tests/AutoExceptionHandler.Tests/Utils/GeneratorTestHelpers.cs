@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace ExceptionHandlerGenerator.Tests.Utils;
+namespace AutoExceptionHandler.Tests.Utils;
 
 public static class GeneratorTestHelpers {
   public static Compilation CreateCompilation(string source, params Type[] additionalTypes) {

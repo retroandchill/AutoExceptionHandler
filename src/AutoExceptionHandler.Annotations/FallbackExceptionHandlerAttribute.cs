@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExceptionHandlerAnnotations;
+namespace AutoExceptionHandler.Annotations;
 
 /// <summary>
 /// An attribute used to mark a method as a fallback exception handler.

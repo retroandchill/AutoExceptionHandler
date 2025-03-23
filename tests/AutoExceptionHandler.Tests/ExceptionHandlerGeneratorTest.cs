@@ -1,17 +1,18 @@
 using System.Linq;
-using ExceptionHandlerAnnotations;
+using AutoExceptionHandler.Annotations;
+using AutoExceptionHandler.Generator;
 using Microsoft.CodeAnalysis.CSharp;
 using Xunit;
-using static ExceptionHandlerGenerator.Tests.Utils.GeneratorTestHelpers;
+using static AutoExceptionHandler.Tests.Utils.GeneratorTestHelpers;
 
-namespace ExceptionHandlerGenerator.Tests;
+namespace AutoExceptionHandler.Tests;
 
 public class ExceptionHandlerGeneratorTest {
   private const string VectorClassText = """
                                          using System;
-                                         using ExceptionHandlerAnnotations;
+                                         using AutoExceptionHandler.Annotations;
 
-                                         namespace ExceptionHandlerGenerator.Sample;
+                                         namespace TestNamespace;
 
                                          // This code will not compile until you build the project with the Source Generators
 
@@ -40,7 +41,7 @@ public class ExceptionHandlerGeneratorTest {
   private const string ExpectedGeneratedClassText = """
                                                     using System;
                                                     
-                                                    namespace ExceptionHandlerGenerator.Sample;
+                                                    namespace TestNamespace;
                                                     
                                                     partial class ExampleHandler {
                                                     
@@ -63,8 +64,8 @@ public class ExceptionHandlerGeneratorTest {
   [Fact]
   public void GenerateReportMethod() {
     // Create an instance of the source generator.
-    var generator = new Generators.ExceptionHandlerGenerator();
-
+    var generator = new ExceptionHandlerGenerator();
+    
     // Source generators should be tested using 'GeneratorDriver'.
     var driver = CSharpGeneratorDriver.Create(generator);
 

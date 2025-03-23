@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExceptionHandlerAnnotations;
+namespace AutoExceptionHandler.Annotations;
 
 /// <summary>
 /// An attribute used to designate a class as an exception handler.

@@ -4,6 +4,10 @@
         <TargetFramework>netstandard2.0</TargetFramework>
         <LangVersion>13</LangVersion>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+        <RootNamespace>AutoExceptionHandler.Annotations</RootNamespace>
+        <PackageId>AutoExceptionHandler.Annotations</PackageId>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">

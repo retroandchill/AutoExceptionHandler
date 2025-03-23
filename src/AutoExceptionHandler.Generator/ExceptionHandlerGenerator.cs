@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using ExceptionHandlerAnnotations;
-using ExceptionHandlerGenerator.Properties;
-using ExceptionHandlerGenerator.Utilities;
+using AutoExceptionHandler.Annotations;
+using AutoExceptionHandler.Generator.Utilities;
+using AutoExceptionHandler.Properties;
 using HandlebarsDotNet;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace ExceptionHandlerGenerator.Generators;
+namespace AutoExceptionHandler.Generator;
 
 [Generator]
 public class ExceptionHandlerGenerator : IIncrementalGenerator {

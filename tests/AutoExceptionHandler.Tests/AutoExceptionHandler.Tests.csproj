@@ -6,7 +6,8 @@
 
         <IsPackable>false</IsPackable>
 
-        <RootNamespace>ExceptionHandlerGenerator.Tests</RootNamespace>
+        <RootNamespace>AutoExceptionHandler.Tests</RootNamespace>
+        <PackageId>AutoExceptionHandler.Tests</PackageId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\ExceptionHandlerGenerator\ExceptionHandlerGenerator.csproj"/>
+        <ProjectReference Include="..\..\src\AutoExceptionHandler.Generator\AutoExceptionHandler.Generator.csproj"/>
     </ItemGroup>
 
 

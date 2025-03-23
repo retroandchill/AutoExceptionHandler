@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExceptionHandlerAnnotations;
+namespace AutoExceptionHandler.Annotations;
 
 #pragma warning disable 9113
 

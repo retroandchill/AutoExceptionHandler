@@ -1,11 +1,9 @@
-
 using System;
-using ExceptionHandlerAnnotations;
+using AutoExceptionHandler.Annotations;
 
-namespace ExceptionHandlerGenerator.Sample;
+namespace AutoExceptionHandler.Sample;
 
 // This code will not compile until you build the project with the Source Generators
-
 [ExceptionHandler]
 public partial class ExampleHandler {
   [GeneralExceptionHandler]

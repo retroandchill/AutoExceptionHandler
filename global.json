@@ -1,6 +1,6 @@
 ﻿{
   "sdk": {
-    "version": "9.0.202",
+    "version": "netstandard2.0",
     "rollForward": "latestMajor",
     "allowPrerelease": false
   }

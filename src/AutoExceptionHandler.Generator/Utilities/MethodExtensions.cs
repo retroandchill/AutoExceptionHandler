@@ -1,6 +1,6 @@
 ﻿using Microsoft.CodeAnalysis;
 
-namespace ExceptionHandlerGenerator.Utilities;
+namespace AutoExceptionHandler.Generator.Utilities;
 
 /// <summary>
 /// Provides extension methods for working with methods represented as <see cref="IMethodSymbol"/>.
